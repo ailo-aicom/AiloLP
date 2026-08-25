@@ -177,6 +177,24 @@ h1, h2, h3, h4 {
   background-color: var(--color-black-light);
 }
 
+.btn-white {
+  background-color: #FFFFFF;
+  color: var(--color-black);
+}
+
+.btn-white:hover {
+  background-color: #F8F6F0;
+}
+
+.btn-light-yellow {
+  background-color: var(--color-yellow-light);
+  color: var(--color-black);
+}
+
+.btn-light-yellow:hover {
+  background-color: var(--color-yellow);
+}
+
 .btn-sm {
   padding-top: calc(8px - 1px);
   padding-bottom: 8px;
