@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会社概要・運営者情報 | Ailo（アイロ）</title>
+  <meta name="description" content="AI英会話アプリ「Ailo（アイロ）」を運営する株式会社Ailoの会社概要・代表者情報・ミッションをご紹介します。">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .company-page-section {
+      padding: 60px 0 100px;
+    }
+    .company-card {
+      background-color: #FFFFFF;
+      border: var(--border-thick);
+      box-shadow: var(--shadow-lg);
+      border-radius: var(--radius-lg);
+      padding: 50px 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .back-home-btn {
+      margin-bottom: 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--color-text-sub);
+      transition: color 0.2s;
+    }
+    .back-home-btn:hover {
+      color: var(--color-pink);
+    }
+    .page-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .page-subtitle {
+      font-size: 1rem;
+      color: var(--color-text-sub);
+      font-weight: 600;
+      margin-bottom: 36px;
+      padding-bottom: 20px;
+      border-bottom: var(--border-thick);
+    }
+    
+    /* Mission Box */
+    .mission-box {
+      background: var(--color-yellow-light);
+      border: 2px solid var(--color-black);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+    .mission-badge {
+      display: inline-block;
+      background: var(--color-black);
+      color: var(--color-yellow);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+    .mission-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      color: var(--color-black);
+    }
+    .mission-desc {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+
+    /* Representative Profile */
+    .representative-section {
+      margin-bottom: 48px;
+    }
+    .section-heading {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-heading::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 22px;
+      background: var(--color-pink);
+      border-radius: 3px;
+    }
+    .rep-profile-card {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      background: #FAFAFA;
+      border: 2px solid #E5E5E5;
+      border-radius: var(--radius-md);
+      padding: 28px;
+      align-items: start;
+    }
+    .rep-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: var(--radius-md);
+      border: 2px solid var(--color-black);
+      object-fit: cover;
+      box-shadow: 3px 3px 0px var(--color-black);
+    }
+    .rep-name-group {
+      margin-bottom: 14px;
+    }
+    .rep-role {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-text-sub);
+    }
+    .rep-name {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--color-black);
+    }
+    .rep-bio {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #444444;
+    }
+
+    /* Company Info Table */
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    .company-table tr {
+      border-bottom: 1px solid #EEEEEE;
+    }
+    .company-table tr:last-child {
+      border-bottom: none;
+    }
+    .company-table th {
+      width: 28%;
+      padding: 16px 14px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--color-black);
+      background: #F9F9F9;
+      text-align: left;
+      vertical-align: top;
+      border-right: 1px solid #EEEEEE;
+    }
+    .company-table td {
+      padding: 16px 20px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #333333;
+    }
+    
+    @media (max-width: 640px) {
+      .company-card {
+        padding: 32px 20px;
+      }
+      .page-title {
+        font-size: 1.7rem;
+      }
+      .rep-profile-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+      }
+      .rep-avatar {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+      }
+      .company-table th, .company-table td {
+        display: block;
+        width: 100%;
+        border-right: none;
+      }
+      .company-table th {
+        padding-bottom: 6px;
+        background: transparent;
+        color: var(--color-text-sub);
+        font-size: 0.85rem;
+      }
+      .company-table td {
+        padding-top: 0;
+        padding-bottom: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="../" class="logo-link">
+        <img src="../assets/images/logo.png" alt="Ailo アイロ" class="header-logo-img">
+      </a>
+      <div class="header-cta">
+        <a href="../#download" class="btn btn-sm btn-primary">
+          <i class="fa-brands fa-apple"></i> 先行体験（無料）
+        </a>
+        <a href="../#business" class="btn btn-sm btn-white">
+          <i class="fa-solid fa-building"></i> 法人・協賛窓口
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="company-page-section">
+    <div class="container">
+      <div class="company-card">
+        <a href="../" class="back-home-btn"><i class="fa-solid fa-arrow-left"></i> トップページへ戻る</a>
+        
+        <h1 class="page-title">会社概要・運営者情報</h1>
+        <p class="page-subtitle">推しと話せる爽快ボクシングAI英会話「Ailo」を運営するチームについて</p>
+
+        <!-- Mission -->
+        <div class="mission-box">
+          <span class="mission-badge">OUR MISSION</span>
+          <h2 class="mission-title">「話したくなる推し」と「爽快なゲーミフィケーション」で、英語が自然と口から出る世界を創る。</h2>
+          <p class="mission-desc">
+            英語学習の最大の壁は「続かないこと」と「恥ずかしさ」です。Ailoは、好きなキャラクターや人物を推しアバター化し、1回5分のボクシング対決ゲームで思わず声を出してしまう新感覚の体験を提供。初心者でも沈黙ゼロで楽しめる次世代の語学コミュニケーションを届けています。
+          </p>
+        </div>
+
+        <!-- Representative Profile -->
+        <div class="representative-section">
+          <h2 class="section-heading">代表者プロフィール</h2>
+          <div class="rep-profile-card">
+            <img src="../assets/images/profile.jpg" alt="代表 酒井 栄二郎" class="rep-avatar">
+            <div>
+              <div class="rep-name-group">
+                <span class="rep-role">株式会社Ailo 代表取締役 / CEO</span>
+                <div class="rep-name">酒井 栄二郎 <span style="font-size: 0.9rem; font-weight: 500; color: #777;">(Eijiro Sakai)</span></div>
+              </div>
+              <p class="rep-bio">
+                B2Bマーケティングの戦略設計から実行支援、SaaS企業のCMO、グローバルメディアの立ち上げなど、マーケティングとテクノロジーの最前線で事業成長を牽引。「英語力アップそのものではなく、外国人と楽しく会話して好感を持たれるコミュニケーション力」を誰もが手軽に身につけられる社会を目指し、AI英会話アプリ「Ailo」を創業。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Details Table -->
+        <div>
+          <h2 class="section-heading">企業情報</h2>
+          <table class="company-table">
+            <tbody>
+              <tr>
+                <th>会社名</th>
+                <td>株式会社Ailo（Ailo Inc.）</td>
+              </tr>
+              <tr>
+                <th>代表者</th>
+                <td>代表取締役 酒井 栄二郎</td>
+              </tr>
+              <tr>
+                <th>所在地</th>
+                <td>〒160-0023<br>東京都新宿区西新宿３丁目３番１３号 西新宿水間ビル６階</td>
+              </tr>
+              <tr>
+                <th>事業内容</th>
+                <td>
+                  1. AI英会話アプリ「Ailo（アイロ）」の企画・開発・運営<br>
+                  2. 法人向け英語コミュニケーション研修・福利厚生ソリューションの提供<br>
+                  3. サンプリングマーケティング・アライアンス事業
+                </td>
+              </tr>
+              <tr>
+                <th>参加プロジェクト</th>
+                <td>東京都スタートアップ支援拠点「Tokyo Innovation Base (TIB)」参加プロジェクト</td>
+              </tr>
+              <tr>
+                <th>お問い合わせ</th>
+                <td>
+                  <a href="mailto:info@ailo.ai" style="color: var(--color-pink); font-weight: 700; text-decoration: underline;">info@ailo.ai</a><br>
+                  <span style="font-size: 0.85rem; color: #777;">（※法人契約・協賛・アライアンス等のご相談は<a href="../#business" style="color: var(--color-black); font-weight: 700; text-decoration: underline;">こちら</a>の専用窓口からも承っております）</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="../" class="footer-logo-link">
+          <img src="../assets/images/logo.png" alt="Ailo アイロ" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">推しと話せる爽快ボクシングAI英会話</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="../#features">特長</a>
+        <a href="../#steps">使い方</a>
+        <a href="../#comparison">料金比較</a>
+        <a href="../#faq">FAQ</a>
+        <a href="../#business">法人・協賛窓口</a>
+        <a href="../company/">会社概要</a>
+        <a href="../terms/">利用規約</a>
+        <a href="../privacy-policy/">プライバシーポリシー</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ailo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
